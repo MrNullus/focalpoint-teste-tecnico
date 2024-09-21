@@ -21,15 +21,17 @@ $color-border-tertiary: rgba(215, 221, 233, 1);
 $color-border-task: rgba(215, 221, 233, 1);
 $color-border-task-completed: rgba(7, 150, 211, 1);
 $color-border-task-not-completed: rgba(176, 187, 209, 1);
-$box-shadow: 0px 1px 2px 0px $color-shadow-drop-task;
+$box-shadow-task: 0px 1px 2px 0px $color-shadow-drop-task;
 
 // @ PADDINGS
+$padding-large-x: 32px;
 $padding-large: 24px;
 $padding-small: 16px;
 $padding-header: 0px 0px $padding-small 0px;
 
 
 // @ RADIUS
+$radius-small-x: 4px;
 $radius-small: 8px;
 $radius-medium: 16px;
 
@@ -38,9 +40,9 @@ $radius-medium: 16px;
 $border-primary: 1px solid $color-border-primary;
 $border-secondary: 1px solid $color-border-secondary;
 $border-tertiary: 1px solid $color-border-tertiary;
-$border-task: 1px dotted $color-border-task;
-$border-task-completed: 1px solid $color-border-task-completed;
-$border-task-not-completed: 1px solid $color-border-task-not-completed;
+$border-task: 1px solid $color-border-task;
+$border-task-completed: 2px solid $color-border-task-completed;
+$border-task-not-completed: 2px solid $color-border-task-not-completed;
 
 
 // @ FONTS

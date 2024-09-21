@@ -1,21 +1,24 @@
 import styles from "./style.module.scss";
 
-const Task = ( { title } ) => {
+const Task = ( { title, status } ) => {
   return (
-    <div className="task-item task-completed">
-      <div className="task-status">
-        <img
-          src="/icons/check.svg" alt="Check"
-        />
-        <input type="checkbox" name="status"/>
-      </div>
-      <div className="task-content">
+    <div className={ `${ styles.taskItem } ${status?  styles.taskCompleted : ''}`  }>
+
+      <div className={ styles.tasksContainer}>
+        <div className={ styles.taskStatus}>
+          <img
+            src="/icons/check.svg" alt="Check"
+          />
+          <input type="checkbox" name="status"/>
+        </div>
+
         <p>
           { title }
         </p>
       </div>
-      <div className="task-action">
-        <button className={ "btn-delete" }>
+
+      <div className={styles.taskAction}>
+        <button>
           <img
             src="/icons/trash.svg" alt="Delete"
           />

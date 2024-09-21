@@ -1,0 +1,82 @@
+@import "../../app/resources/styles/variables.module";
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: $radius-small;
+  border: 2px dashed $color-border-primary;
+  cursor: pointer;
+
+  padding: $padding-small;
+  text-align: left;
+
+  &:hover {
+    border: 2px solid rgba(247, 249, 253, 1);
+    background: rgba(247, 249, 253, 1);
+  }
+
+  .tasksContainer {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    .taskStatus {
+      position: relative;
+
+      img {
+        position: relative;
+        content: "";
+        top: 1px;
+        display: none;
+      }
+
+      input {
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        border-radius: $radius-small-x;
+        border: $border-task-not-completed;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .taskAction {
+    button {
+      background: $color-white;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.taskCompleted {
+
+  .tasksContainer {
+    .taskStatus {
+      input {
+        position: relative;
+        border-color: $color-border-task-completed !important;
+      }
+
+      img {
+        display: block;
+        position: absolute;
+        top: 12px;
+        top: 6px;
+        left: 7px;
+      }
+    }
+
+    p {
+      color: $color-text-secondary;
+      text-decoration: line-through;
+    }
+  }
+
+}
