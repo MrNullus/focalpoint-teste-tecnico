@@ -11,10 +11,10 @@ export default function Home() {
 
       <Header/>
 
-      <main className={ "app-container" }>
+      <main className={ styles.appContainer }>
 
-        <div className="wrapper">
-          <section className="tasks-container">
+        <div className={styles.wrapper}>
+          <section className={ styles.tasksContainer }>
 
             <AreaTasksUncompleted/>
 

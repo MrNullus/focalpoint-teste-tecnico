@@ -1,0 +1,10 @@
+@import "../../app/resources/styles/variables.module";
+
+.header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding-header;
+  border-bottom: $border-primary;
+}
