@@ -1,0 +1,106 @@
+// @ COLORS
+$color-white: rgba(255, 255, 255, 1);
+
+$color-delete-button: linear-gradient(90deg, #D30707 0%, #F05353 68.65%);
+$color-add-button: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
+$color-primary-button: rgba(231, 238, 251, 1);
+
+$color-text-primary: rgba(0, 0, 0, 1);
+$color-text-secondary: rgba(0, 0, 0, 0.54);
+$color-border-icon: rgba(176, 187, 209, 1);
+
+$color-drop-shadow: rgba(16, 24, 40, 0.18);
+$color-modal-backdrop: rgba(255, 255, 255, 0.8);
+
+$checkbox-bg-completed: rgba(160, 220, 246, 1);
+$hover-color: rgba(247, 249, 253, 1);
+
+$color-border-primary: rgba(215, 221, 233, 1);
+$color-border-secondary: rgba(234, 236, 240, 1);
+$color-border-tertiary: rgba(215, 221, 233, 1);
+$color-border-task: rgba(215, 221, 233, 1);
+$color-border-task-completed: rgba(7, 150, 211, 1);
+$color-border-task-not-completed: rgba(176, 187, 209, 1);
+
+
+// @ PADDINGS
+$button-padding-top: 16px;
+$button-padding-right: 24px;
+$button-padding-bottom: 16px;
+$button-padding-left: 24px;
+$container-padding: 16px;
+
+
+// @ RADIUS
+$radius-small: 8px;
+$radius-medium: 16px;
+
+
+// @ BORDERS
+$border-primary: 1px solid $color-border-primary;
+$border-secondary: 1px solid $color-border-secondary;
+$border-tertiary: 1px solid $color-border-tertiary;
+$border-task: 1px dotted $color-border-task;
+$border-task-completed: 1px solid $color-border-task-completed;
+$border-task-not-completed: 1px solid $color-border-task-not-completed;
+
+
+// @ FONTS
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('/src/app/resourcesrces/fonts/InterTight-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+// Tipografia base
+$base-font-family: 'Inter Tight', sans-serif;
+$base-font-size: 16px;
+$base-font-weight: 400;
+$base-line-height: 19.36px;
+$base-letter-spacing: -0.02em;
+$base-text-align: left;
+
+// Tipografia para o texto da tarefa
+$task-text-font-family: $base-font-family;
+$task-text-font-size: $base-font-size;
+$task-text-font-weight: $base-font-weight;
+$task-text-line-height: $base-line-height;
+$task-text-letter-spacing: $base-letter-spacing;
+$task-text-text-align: $base-text-align;
+
+// Tipografia para os subtítulos
+$subtitle-font-family: $base-font-family;
+$subtitle-font-size: $base-font-size;
+$subtitle-font-weight: $base-font-weight;
+$subtitle-line-height: $base-line-height;
+$subtitle-letter-spacing: $base-letter-spacing;
+$subtitle-text-align: $base-text-align;
+
+// Tipografia para o texto da tarefa completa
+$task-completed-text-font-family: $base-font-family;
+$task-completed-text-font-size: $base-font-size;
+$task-completed-text-font-weight: $base-font-weight;
+$task-completed-text-line-height: $base-line-height;
+$task-completed-text-letter-spacing: $base-letter-spacing;
+$task-completed-text-text-align: $base-text-align;
+$task-completed-text-font-stroke-color: #fff;
+$task-completed-text-font-stroke-width: 2px;
+
+// Tipografia para os botões "Delete" e "Add"
+$button-text-font-family: $base-font-family;
+$button-text-font-size: $base-font-size;
+$button-text-font-weight: 500;
+$button-text-line-height: $base-line-height;
+$button-text-letter-spacing: $base-letter-spacing;
+$button-text-text-align: $base-text-align;
+
+// Tipografia para texto fraco e cinza
+$weak-text-font-family: $base-font-family;
+$weak-text-font-size: $base-font-size;
+$weak-text-font-weight: $base-font-weight;
+$weak-text-line-height: 24px;
+$weak-text-letter-spacing: $base-letter-spacing;
+$weak-text-text-align: $base-text-align;
+$weak-text-color: #6B7280;
