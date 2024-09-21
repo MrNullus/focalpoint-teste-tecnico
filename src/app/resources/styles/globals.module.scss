@@ -1,0 +1,16 @@
+@import "variables.module";
+
+.title {
+  font-size: $title-font-size;
+  font-weight: $title-font-weight;
+  line-height: $title-line-height;
+  letter-spacing: $title-letter-spacing;
+}
+
+.subtitle {
+  color: $color-text-secondary;
+  font-size: $subtitle-font-size;
+  font-weight: $subtitle-font-weight;
+  line-height: $subtitle-line-height;
+  letter-spacing: $subtitle-letter-spacing;
+}
