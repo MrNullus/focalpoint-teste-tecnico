@@ -1,17 +1,3 @@
-import localFont from "next/font/local";
-import Head from "next/head";
-
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
-
 export const metadata = {
   title: 'FocalPoint - Teste Técnico',
   description: 'Aplicativo de lista de tarefas construído com Next.js e SCSS para a vaga de desenvolvedor frontend júnior',
@@ -48,9 +34,6 @@ export const metadata = {
 export default function RootLayout( { children } ) {
     return (
         <html lang="pt-br">
-        <Head>
-
-        </Head>
         <body className="">
         { children }
         </body>
