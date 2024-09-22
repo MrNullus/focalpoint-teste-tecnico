@@ -1,7 +1,7 @@
 import styles from "./style.module.scss";
 import ModalBase from "@/components/ModalBase";
 
-const ModalAddTask = () => {
+const ModalAddTask = ( { setModalAddTask } ) => {
   return (
     <ModalBase title="Nova tarefa">
 
@@ -15,7 +15,10 @@ const ModalAddTask = () => {
         </div>
 
         <div className={ styles.btnActions }>
-          <button className={ styles.btnCloseModal }>
+          <button
+            className={ styles.btnCloseModal }
+            onClick={ () => setModalAddTask( false ) }
+          >
             Cancelar
           </button>
 
