@@ -1,0 +1,44 @@
+@import "../../app/resources/styles/variables.module";
+@import "../../app/resources/styles/mixins/buttons";
+
+.modalInner {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  min-width: 300px;
+  max-width: 340px;
+
+  .formGroup {
+    width: 100%;
+    display: grid;
+    gap: 0.5rem;
+
+    input {
+      max-width: 100%;
+      padding: $padding-small;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+  }
+
+  .btnActions {
+    display: flex;
+    gap: 0.8rem;
+    width: 100%;
+
+
+    .btnDeleteTask {
+      @include btn-delete;
+    }
+    .btnCloseModal {
+      @include btn-secondary;
+    }
+    button {
+      width: inherit;
+    }
+  }
+}
