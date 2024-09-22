@@ -28,7 +28,7 @@
 ## Analise de Requisitos
 [Ver](https://github.com/MrNullus/focalpoint-teste-tecnico/wiki/Analise-de-Requisitos)
 
-## Genrenciamento
+## Gerenciamento
 Veja a forma como gerenciei as tarefas do projeto na aba Projects ou [clicando aqui](https://github.com/users/MrNullus/projects/13)
 
 ---
