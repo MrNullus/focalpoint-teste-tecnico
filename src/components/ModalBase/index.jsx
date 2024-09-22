@@ -3,9 +3,9 @@ import styles from "./style.module.scss";
 const ModalBase = ({ title, children }) => {
   return (
 
-    <div className="modal-container">
-      <div className="modal-content">
-        <h3 className="heading3">
+    <div className={ styles.modalContainer }>
+      <div className={styles.modalContent}>
+        <h3 className={styles.modalTitle}>
           { title }
         </h3>
 
