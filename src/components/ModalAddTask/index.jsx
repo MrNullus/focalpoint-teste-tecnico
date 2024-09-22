@@ -5,23 +5,23 @@ const ModalAddTask = () => {
   return (
     <ModalBase title="Nova tarefa">
 
-      <form className={ "modal-inner" }>
-        <div className="form-group">
-          <label htmlFor="title"></label>
+      <form className={ styles.modalInner }>
+        <div className={ styles.formGroup }>
+          <label htmlFor="title">Titulo</label>
           <input
             type="text"
             placeholder="Digite"
           />
         </div>
 
-        <div className="btn-actions">
-          <button className="btn-close-modal">
+        <div className={ styles.btnActions }>
+          <button className={ styles.btnCloseModal }>
             Cancelar
           </button>
 
           <button
             type="button"
-            className={ "btn-add-task" }
+            className={ styles.btnAddTask }
           >
             Adicionar
           </button>

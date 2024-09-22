@@ -11,25 +11,24 @@ export default function Home() {
 
       <Header/>
 
-      <main className={ "app-container" }>
+      <main className={ styles.appContainer }>
 
-        <div className="wrapper">
-          <section className="tasks-container">
-
+        <div className={ styles.wrapper }>
+          <section className={ styles.tasksContainer }>
             <AreaTasksUncompleted/>
 
             <AreaTasksCompleted/>
           </section>
-
-          <button className="btn-add-task">
-            Adicionar nova tarefa
-          </button>
         </div>
 
+
+          <button className={ styles.btnAddTask }>
+            Adicionar nova tarefa
+          </button>
       </main>
 
-      <ModalAddTask />
-      <ModalDeleteTask />
+      {/*<ModalAddTask/>*/}
+      {/*<ModalDeleteTask/>*/}
     </div>
   );
 }
