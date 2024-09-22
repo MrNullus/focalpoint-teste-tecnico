@@ -22,12 +22,6 @@ export default function Home() {
       status : true
     }
   ] );
-  const [ newTask, setNewTask ] = useState( { title : '' } );
-
-  const addTask = () => {
-    setNewTask( { title : '', status : false } );
-    setTasks( [ ...tasks, newTask ] );
-  };
 
   return (
     <div className={ styles.page }>
@@ -42,7 +36,12 @@ export default function Home() {
               setModalDeleteTask={ setModalDeleteTask }
               setTaskSelected={ setTaskSelected }
               taskSelected={ taskSelected }
-              tasks={ tasks.filter( task => task.status == false ) }
+              tasks={
+                tasks.length  > 0?
+                  tasks.filter( task => task.status == false )
+                    :
+                  []
+              }
             />
 
             <AreaTasksCompleted
@@ -50,7 +49,12 @@ export default function Home() {
               setModalDeleteTask={ setModalDeleteTask }
               setTaskSelected={ setTaskSelected }
               taskSelected={ taskSelected }
-              tasks={ tasks.filter( task => task.status == true ) }
+              tasks={
+                tasks.length  > 0?
+                  tasks.filter( task => task.status == true )
+                :
+                 []
+            }
             />
           </section>
         </div>

@@ -6,6 +6,7 @@ const Task = ( { title, status, key, setModalDeleteTask, setTaskSelected, tasks,
     setTaskSelected( { title : title } );
     setModalDeleteTask( true );
   };
+
   const handleCompleteTask = () => {
     setTaskSelected({ title });
 
@@ -14,8 +15,6 @@ const Task = ( { title, status, key, setModalDeleteTask, setTaskSelected, tasks,
         task.status = !task.status;
       }
     });
-
-    setTasks( newTasks );
   };
 
   return (
@@ -29,7 +28,7 @@ const Task = ( { title, status, key, setModalDeleteTask, setTaskSelected, tasks,
           <input
             type="checkbox"
             name="status"
-            onClick={handleCompleteTask}
+            onClick={ handleCompleteTask }
           />
         </div>
 

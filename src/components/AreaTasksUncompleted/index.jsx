@@ -10,18 +10,20 @@ const AreaTasksUncompleted = ( { tasks, setModalDeleteTask, setTaskSelected, tas
 
       <div className={ styleGlobals.tasksGroup }>
         {
+          tasks.length > 0 &&
           tasks.map( ( task ) => (
-            <Task
-              tasks={ tasks }
-              setTasks={ setTasks }
-              taskSelected={ taskSelected }
-              setTaskSelected={ setTaskSelected }
-              setModalDeleteTask={ setModalDeleteTask }
-              key={ task.title }
-              status={ task.status }
-              title={ task.title }
-            />
-          ) )
+              <Task
+                tasks={ tasks }
+                setTasks={ setTasks }
+                taskSelected={ taskSelected }
+                setTaskSelected={ setTaskSelected }
+                setModalDeleteTask={ setModalDeleteTask }
+                key={ task.title }
+                status={ task.status }
+                title={ task.title }
+              />
+            )
+          )
         }
       </div>
     </article>
