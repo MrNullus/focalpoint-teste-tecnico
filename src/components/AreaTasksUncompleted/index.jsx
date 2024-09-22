@@ -15,7 +15,7 @@ const AreaTasksUncompleted = ( { tasks, setModalDeleteTask, setTaskSelected } ) 
             <Task
               setTaskSelected={ setTaskSelected }
               setModalDeleteTask={ setModalDeleteTask }
-              key={ task.id }
+              key={ task.title }
               status={ task.status }
               title={ task.title }
             />

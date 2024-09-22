@@ -15,12 +15,10 @@ export default function Home() {
   const [ taskSelected, setTaskSelected ] = useState( {} );
 
   const [ tasks, setTasks ] = useState( [ {
-    id : 1,
     title : 'Estudar React',
     status : false
   },
     {
-      id : 2,
       title : 'Levar o lixo para fora',
       status : true
     }
