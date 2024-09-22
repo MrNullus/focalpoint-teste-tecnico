@@ -14,3 +14,31 @@
   line-height: $subtitle-line-height;
   letter-spacing: $subtitle-letter-spacing;
 }
+
+.headingAreaTask {
+  color: $color-text-secondary;
+  font-family: $task-text-font-family;
+  font-size: $task-text-font-size;
+  font-weight: $task-text-font-weight;
+  line-height: $task-text-line-height;
+  letter-spacing: $task-text-letter-spacing;
+  text-align: center;
+}
+
+.tasksGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 14px;
+}
+
+.textWeak {
+  color: $weak-text-color;
+  font-weight: $weak-text-font-weight;
+  font-size: $weak-text-font-size;
+  line-height: $weak-text-line-height;
+  letter-spacing: $weak-text-letter-spacing;
+  text-align: $weak-text-text-align;
+}
