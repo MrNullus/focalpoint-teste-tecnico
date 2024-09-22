@@ -25,18 +25,23 @@
 > Ao finalizar o teste, envie-o neste formulário: [Link](https://docs.google.com/forms/d/e/1FAIpQLSf-3DqckTRlShPMR4nAFYwDUL-2Caa74vHi_KbD0R710oW1cw/viewform?usp=send_form)
 
 
+## Analise de Requisitos
+[Ver](https://github.com/MrNullus/focalpoint-teste-tecnico/wiki/Analise-de-Requisitos)
+
+## Genrenciamento
+Veja a forma como gerenciei as tarefas do projeto na aba Projects ou [clicando aqui](https://github.com/users/MrNullus/projects/13)
 
 ---
 
-## Criar tarefa
+### Criar tarefa
 https://github.com/user-attachments/assets/0f472d53-df5d-4d75-abc3-ed81b55986c8
 
 
-## Completar tarefa
+### Completar tarefa
 https://github.com/user-attachments/assets/72b6d092-528e-4901-b792-8f1013b2687f
 
 
-## Deletar tarefa
+### Deletar tarefa
 https://github.com/user-attachments/assets/7a030fb1-1f3d-4be1-8ad9-a2448203d434
 
 
