@@ -1,13 +1,63 @@
 @import "./resources/styles/variables.module";
+@import "./resources/styles/mixins/buttons";
 
 .page {
- font-family: $base-font-family;
- font-size: $base-font-size;
- font-weight: $base-font-weight;
- line-height: $base-line-height;
- letter-spacing: $base-letter-spacing;
- text-align: $base-text-align;
- background-color: $color-white;
- color: $color-text-primary;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: $color-white;
 
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  letter-spacing: $base-letter-spacing;
+  text-align: $base-text-align;
+  line-height: $base-line-height;
+  color: $color-text-primary;
+
+  .appContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    gap: 2rem;
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      align-content: center;
+      gap: 2rem;
+      min-width: 450px;
+      @media (max-width: 768px) {
+        min-width: 300px;
+      }
+
+
+      border: $border-task;
+      background-color: $color-white;
+      box-shadow: 0px 1px 2px 0px $color-shadow-drop-task;
+      padding: $padding-large-x;
+      border-radius: $radius-medium;
+
+      .tasksContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    .btnAddTask {
+      @include btn-success;
+      min-width: 510px;
+      @media (max-width: 768px) {
+        min-width: 360px;
+      }
+    }
+  }
+}
