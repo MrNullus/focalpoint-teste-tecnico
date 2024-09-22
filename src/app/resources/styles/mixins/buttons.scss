@@ -1,0 +1,28 @@
+@import "../variables.module";
+
+@mixin btn-success {
+  background: $color-add-button;
+  color: $color-white;
+  border: none;
+  cursor: pointer;
+  padding: $padding-small;
+  border-radius: $radius-small;
+  width: 283px;
+  font-weight: $button-text-font-weight;
+  line-height: $button-text-line-height;
+  letter-spacing: $button-text-letter-spacing;
+}
+
+@mixin btn-secondary {
+  @include btn-success;
+  background: $color-primary-button;
+  color: $color-text-primary;
+}
+
+@mixin btn-delete {
+  @include btn-success;
+  background: $color-delete-button;
+}
+
+
+
