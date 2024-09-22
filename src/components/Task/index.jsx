@@ -1,5 +1,4 @@
 import styles from "./style.module.scss";
-import { useRef } from "react";
 
 const Task = ( { title, status, key, setModalDeleteTask, setTaskSelected, tasks, taskSelected, setTasks } ) => {
 
@@ -14,7 +13,9 @@ const Task = ( { title, status, key, setModalDeleteTask, setTaskSelected, tasks,
       if ( task.title === taskSelected.title ) {
         task.status = !task.status;
       }
-    })
+    });
+
+    setTasks( newTasks );
   };
 
   return (

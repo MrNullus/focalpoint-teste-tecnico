@@ -46,8 +46,10 @@ export default function Home() {
             />
 
             <AreaTasksCompleted
+              setTasks={ setTasks }
               setModalDeleteTask={ setModalDeleteTask }
               setTaskSelected={ setTaskSelected }
+              taskSelected={ taskSelected }
               tasks={ tasks.filter( task => task.status == true ) }
             />
           </section>
