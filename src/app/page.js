@@ -7,7 +7,6 @@ import AreaTasksUncompleted from "@/components/AreaTasksUncompleted";
 import AreaTasksCompleted from "@/components/AreaTasksCompleted";
 import ModalDeleteTask from "@/components/ModalDeleteTask";
 import ModalAddTask from "@/components/ModalAddTask";
-import task from "@/components/Task";
 
 export default function Home() {
   const [ modalAddTask, setModalAddTask ] = useState( false );
@@ -39,14 +38,16 @@ export default function Home() {
         <div className={ styles.wrapper }>
           <section className={ styles.tasksContainer }>
             <AreaTasksUncompleted
-              setModalDeleteTask={setModalDeleteTask}
-              setTaskSelected={setTaskSelected}
+              setTasks={ setTasks }
+              setModalDeleteTask={ setModalDeleteTask }
+              setTaskSelected={ setTaskSelected }
+              taskSelected={ taskSelected }
               tasks={ tasks.filter( task => task.status == false ) }
             />
 
             <AreaTasksCompleted
-              setModalDeleteTask={setModalDeleteTask}
-              setTaskSelected={setTaskSelected}
+              setModalDeleteTask={ setModalDeleteTask }
+              setTaskSelected={ setTaskSelected }
               tasks={ tasks.filter( task => task.status == true ) }
             />
           </section>
@@ -63,8 +64,8 @@ export default function Home() {
       {
         modalAddTask && (
           <ModalAddTask
-            tasks={tasks}
-            setTasks={setTasks}
+            tasks={ tasks }
+            setTasks={ setTasks }
             setModalAddTask={ setModalAddTask }
           />
         )
@@ -72,10 +73,10 @@ export default function Home() {
       {
         modalDeleteTask && (
           <ModalDeleteTask
-            setTasks={setTasks}
-            tasks={tasks}
-            taskSelected={taskSelected}
-            setTaskSelected={setTaskSelected}
+            setTasks={ setTasks }
+            tasks={ tasks }
+            taskSelected={ taskSelected }
+            setTaskSelected={ setTaskSelected }
             setModalDeleteTask={ setModalDeleteTask }
           />
         )

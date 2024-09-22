@@ -1,11 +1,21 @@
 import styles from "./style.module.scss";
+import { useRef } from "react";
 
-const Task = ( { title, status, key, setModalDeleteTask, setTaskSelected } ) => {
+const Task = ( { title, status, key, setModalDeleteTask, setTaskSelected, tasks, taskSelected, setTasks } ) => {
 
   const handleDeleteTask = () => {
     setTaskSelected( { title : title } );
     setModalDeleteTask( true );
-  }
+  };
+  const handleCompleteTask = () => {
+    setTaskSelected({ title });
+
+    const newTasks = tasks.map( ( task ) => {
+      if ( task.title === taskSelected.title ) {
+        task.status = !task.status;
+      }
+    })
+  };
 
   return (
     <div key={ key } className={ `${ styles.taskItem } ${ status ?? styles.taskCompleted }` }>
@@ -15,7 +25,11 @@ const Task = ( { title, status, key, setModalDeleteTask, setTaskSelected } ) => 
           <img
             src="/icons/check.svg" alt="Check"
           />
-          <input type="checkbox" name="status"/>
+          <input
+            type="checkbox"
+            name="status"
+            onClick={handleCompleteTask}
+          />
         </div>
 
         <p>
