@@ -1,14 +1,15 @@
+import styleGlobals from "../../app/resources/styles/globals.module.scss";
 import styles from "./style.module.scss";
 import Task from "@/components/Task";
 
 const AreaTasksUncompleted = () => {
   return (
-    <article className={ "area-tasks-uncompleted" }>
-      <h3 className={ "heading3" }>
+    <article className={ `${styleGlobals.tasksGroup} areaTasksUncompleted` }>
+      <h3 className={ styleGlobals.headingAreaTask }>
         Suas tarefas de hoje
       </h3>
 
-      <div className="tasks-group">
+      <div className={ styleGlobals.tasksGroup }>
         <Task
           title="Levar o lixo para fora"
         />
