@@ -1,5 +1,5 @@
 'use client';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./page.module.scss";
 
 import Header from "@/components/Header";
@@ -13,15 +13,21 @@ export default function Home() {
   const [ modalDeleteTask, setModalDeleteTask ] = useState( false );
   const [ taskSelected, setTaskSelected ] = useState( {} );
 
-  const [ tasks, setTasks ] = useState( [ {
-    title : 'Estudar React',
-    status : false
-  },
-    {
-      title : 'Levar o lixo para fora',
-      status : true
+  const [ tasks, setTasks ] = useState( [] );
+
+  useEffect( () => {
+   const storedTasks = localStorage.getItem( 'tasks' );
+    if ( storedTasks ) {
+      setTasks( JSON.parse( storedTasks ) );
     }
-  ] );
+  }, [] );
+
+  useEffect( () => {
+   localStorage.setItem( 'tasks', JSON.stringify( tasks ) );
+  }, [ tasks ] );
+
+  console.table( tasks );
+
 
   return (
     <div className={ styles.page }>
@@ -37,9 +43,9 @@ export default function Home() {
               setTaskSelected={ setTaskSelected }
               taskSelected={ taskSelected }
               tasks={
-                tasks.length  > 0?
+                tasks.length > 0 ?
                   tasks.filter( task => task.status == false )
-                    :
+                  :
                   []
               }
             />
@@ -50,11 +56,11 @@ export default function Home() {
               setTaskSelected={ setTaskSelected }
               taskSelected={ taskSelected }
               tasks={
-                tasks.length  > 0?
+                tasks.length > 0 ?
                   tasks.filter( task => task.status == true )
-                :
-                 []
-            }
+                  :
+                  []
+              }
             />
           </section>
         </div>
