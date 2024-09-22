@@ -7,4 +7,9 @@
   align-items: center;
   padding: $padding-header;
   border-bottom: $border-primary;
+
+  @media (max-width: 768px) {
+    align-items: flex-start;
+    flex-flow: column wrap;
+  }
 }
