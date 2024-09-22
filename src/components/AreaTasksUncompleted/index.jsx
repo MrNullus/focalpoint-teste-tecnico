@@ -2,7 +2,7 @@ import styleGlobals from "../../app/resources/styles/globals.module.scss";
 import styles from "./style.module.scss";
 import Task from "@/components/Task";
 
-const AreaTasksUncompleted = () => {
+const AreaTasksUncompleted = ({ tasks, setModalDeleteTask, setTaskSelected }) => {
   return (
     <article className={ `${styleGlobals.tasksGroup} areaTasksUncompleted` }>
       <h3 className={ styleGlobals.headingAreaTask }>
@@ -10,17 +10,17 @@ const AreaTasksUncompleted = () => {
       </h3>
 
       <div className={ styleGlobals.tasksGroup }>
-        <Task
-          title="Levar o lixo para fora"
-        />
-
-        <Task
-          title="Fazer um bolo"
-        />
-
-        <Task
-          title="Lavar a louça"
-        />
+        {
+          tasks.map((task) => (
+            <Task
+              setTaskSelected={setTaskSelected}
+              setModalDeleteTask={setModalDeleteTask}
+              key={task.id}
+              status={task.status}
+              title={task.title}
+            />
+          ))
+        }
       </div>
     </article>
   );
