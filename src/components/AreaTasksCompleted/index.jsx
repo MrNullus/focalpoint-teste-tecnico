@@ -1,8 +1,7 @@
 import styleGlobals from "../../app/resources/styles/globals.module.scss";
-import styles from "./style.module.scss";
 import Task from "@/components/Task";
 
-const AreaTasksCompleted = ({ tasks, setModalDeleteTask, setTaskSelected }) =>
+const AreaTasksCompleted = ( { tasks, setModalDeleteTask, setTaskSelected, taskSelected, setTasks } ) =>
   (
     <article className={ `${ styleGlobals.tasksGroup } areaTasksCompleted` }>
       <h3 className={ styleGlobals.headingAreaTask }>
@@ -13,9 +12,12 @@ const AreaTasksCompleted = ({ tasks, setModalDeleteTask, setTaskSelected }) =>
         {
           tasks.map( ( task ) => (
             <Task
+              tasks={ tasks }
+              setTasks={ setTasks }
+              taskSelected={ taskSelected }
               setTaskSelected={ setTaskSelected }
               setModalDeleteTask={ setModalDeleteTask }
-              key={ task.id }
+              key={ task.title }
               status={ tasks.status }
               title={ task.title }
             />

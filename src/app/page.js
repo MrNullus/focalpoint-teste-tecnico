@@ -1,5 +1,5 @@
 'use client';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./page.module.scss";
 
 import Header from "@/components/Header";
@@ -7,30 +7,27 @@ import AreaTasksUncompleted from "@/components/AreaTasksUncompleted";
 import AreaTasksCompleted from "@/components/AreaTasksCompleted";
 import ModalDeleteTask from "@/components/ModalDeleteTask";
 import ModalAddTask from "@/components/ModalAddTask";
-import task from "@/components/Task";
 
 export default function Home() {
   const [ modalAddTask, setModalAddTask ] = useState( false );
   const [ modalDeleteTask, setModalDeleteTask ] = useState( false );
   const [ taskSelected, setTaskSelected ] = useState( {} );
 
-  const [ tasks, setTasks ] = useState( [ {
-    id : 1,
-    title : 'Estudar React',
-    status : false
-  },
-    {
-      id : 2,
-      title : 'Levar o lixo para fora',
-      status : true
-    }
-  ] );
-  const [ newTask, setNewTask ] = useState( { title : '' } );
+  const [ tasks, setTasks ] = useState( [] );
 
-  const addTask = () => {
-    setNewTask( { title : '', status : false } );
-    setTasks( [ ...tasks, newTask ] );
-  };
+  useEffect( () => {
+   const storedTasks = localStorage.getItem( 'tasks' );
+    if ( storedTasks ) {
+      setTasks( JSON.parse( storedTasks ) );
+    }
+  }, [] );
+
+  useEffect( () => {
+   localStorage.setItem( 'tasks', JSON.stringify( tasks ) );
+  }, [ tasks ] );
+
+  console.table( tasks );
+
 
   return (
     <div className={ styles.page }>
@@ -41,15 +38,29 @@ export default function Home() {
         <div className={ styles.wrapper }>
           <section className={ styles.tasksContainer }>
             <AreaTasksUncompleted
-              setModalDeleteTask={setModalDeleteTask}
-              setTaskSelected={setTaskSelected}
-              tasks={ tasks.filter( task => task.status == false ) }
+              setTasks={ setTasks }
+              setModalDeleteTask={ setModalDeleteTask }
+              setTaskSelected={ setTaskSelected }
+              taskSelected={ taskSelected }
+              tasks={
+                tasks.length > 0 ?
+                  tasks.filter( task => task.status == false )
+                  :
+                  []
+              }
             />
 
             <AreaTasksCompleted
-              setModalDeleteTask={setModalDeleteTask}
-              setTaskSelected={setTaskSelected}
-              tasks={ tasks.filter( task => task.status == true ) }
+              setTasks={ setTasks }
+              setModalDeleteTask={ setModalDeleteTask }
+              setTaskSelected={ setTaskSelected }
+              taskSelected={ taskSelected }
+              tasks={
+                tasks.length > 0 ?
+                  tasks.filter( task => task.status == true )
+                  :
+                  []
+              }
             />
           </section>
         </div>
@@ -65,8 +76,8 @@ export default function Home() {
       {
         modalAddTask && (
           <ModalAddTask
-            tasks={tasks}
-            setTasks={setTasks}
+            tasks={ tasks }
+            setTasks={ setTasks }
             setModalAddTask={ setModalAddTask }
           />
         )
@@ -74,10 +85,10 @@ export default function Home() {
       {
         modalDeleteTask && (
           <ModalDeleteTask
-            setTasks={setTasks}
-            tasks={tasks}
-            taskSelected={taskSelected}
-            setTaskSelected={setTaskSelected}
+            setTasks={ setTasks }
+            tasks={ tasks }
+            taskSelected={ taskSelected }
+            setTaskSelected={ setTaskSelected }
             setModalDeleteTask={ setModalDeleteTask }
           />
         )
