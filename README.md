@@ -33,6 +33,16 @@ Veja a forma como gerenciei as tarefas do projeto na aba Projects ou [clicando a
 
 ---
 
+## Veja mais trabalhos meus:
+- [Coffee Website](https://mrnullus.github.io/coffee-website/)
+- [JVJ](https://shop-jvj.vercel.app/)
+- [Food Website](https://mrnullus.github.io/food-website/)
+- [Simply Recipes](https://you-simply-recipes.netlify.app/)
+- [Easy Bank](https://ieasybank.netlify.app/)
+- [Docinhos da Thay](https://docinhos-da-thay.netlify.app/)
+      
+---
+
 ### Criar tarefa
 https://github.com/user-attachments/assets/0f472d53-df5d-4d75-abc3-ed81b55986c8
 
