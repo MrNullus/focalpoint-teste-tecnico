@@ -1,0 +1,50 @@
+@import "../../app/resources/styles/variables.module";
+@import "../../app/resources/styles/mixins/buttons";
+
+
+.modalInner {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  min-width: 300px;
+  max-width: 300px;
+  margin-top: 1rem;
+
+  .formGroup {
+    width: 100%;
+    display: grid;
+    gap: 0.5rem;
+
+    input {
+      max-width: 100%;
+      padding: $padding-small;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+  }
+
+  .btnActions {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.8rem;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      flex-flow: row nowrap;
+    }
+
+    .btnAddTask {
+      @include btn-success;
+      width: inherit;
+    }
+
+    .btnCloseModal {
+      @include btn-secondary;
+      width: inherit;
+    }
+  }
+}
